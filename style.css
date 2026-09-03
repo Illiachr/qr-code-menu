@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Patrick+Hand&family=Shadows+Into+Light+Two&display=swap');
+
+:root {
+  --bg-color: #181a1a;
+  --text-color: #F7F5EC;
+  --accent-red: #E03D38;
+  --accent-green: #4C8C53;
+  --subtext-color: #D1CBBF;
+}
+
+.amatic-sc-regular {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.amatic-sc-bold {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.shadows-into-light-two-regular {
+  font-family: "Shadows Into Light Two", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+/* Menu container holding relative context for decorative background elements */
+.menu-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  /* Keeps background images contained */
+}
+
+/* Background Assets Setup */
+.bg-asset {
+  position: absolute;
+  pointer-events: none;
+  /* Prevents interference with text selection or clicks */
+  opacity: 0.25;
+  /* Blends artwork softly into the background */
+  z-index: 0;
+}
+
+/* Positioning individual artwork elements */
+.bg-basilikum {
+  top: 150px;
+  /* left: 250px; */
+  transform: translate(150%, 100%);
+  width: 120px;
+}
+
+.bg-tomato {
+  top: 15px;
+  width: 100px;
+  /* transform: rotate(10deg); */
+}
+
+.bg-pizza {
+  right: -80px;
+  width: 280px;
+  opacity: 0.18;
+}
+
+/* Foreground Content Layer */
+.content-layer {
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.menu-title {
+  display: inline-block;
+  img {
+    width: 226px;
+    height: 76px;
+  }
+}
+
+.header h1 {
+  color: var(--accent-red);
+  font-size: 32px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.header .subtitle {
+  color: var(--accent-green);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.section-title {
+  color: var(--accent-green);
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding-bottom: 5px;
+  margin-top: 30px;
+
+  img {
+    width: calc(165px * 0.7);
+    height: calc(40px * 0.7);
+  }
+
+  .insalata-title-img {
+    width: calc(231px * 0.7);
+    height: calc(42px * 0.7);
+  }
+
+  .pizza-title-img {
+    width: calc(274px * 0.7);
+    height: calc(35px * 0.7);
+  }
+
+  .pasta-title-img {
+    width: calc(119px * 0.85);
+    height: calc(26px * 0.85);
+  }
+}
+
+.menu-item {
+  margin: 15px 0;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Shadows Into Light Two", cursive;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.item-desc {
+  font-size: 16px;
+  font-family: "Patrick Hand", cursive;
+  font-weight: 400;
+  color: var(--subtext-color);
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+footer {
+  margin-top: 4rem;
+
+  .notice-box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
+
+  .footer-ec-karte-notice {
+    width: 297px;
+    height: 14px;
+  }
+
+  .notice-box__fragen {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .footer-fragen-notice {
+    width: 237px;
+    height: 10px;
+  }
+
+  .footer-fragen-notice-ext {
+    width: 188px;
+    height: 10px;
+  }
+}

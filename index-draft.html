@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giardino Verde - Menu</title>
+  <style>
+    :root {
+      --bg-color: #0b0c0c;
+      /* Dark olive green background */
+      --text-color: #F7F5EC;
+      /* Off-white / Cream text */
+      --accent-color: #E6DFD3;
+      /* Muted cream for borders */
+      --subtext-color: #D1CBBF;
+      /* Light warm gray for descriptions */
+    }
+
+    body {
+      font-family: "Georgia", "Times New Roman", serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 20px 15px;
+      text-align: center;
+    }
+
+    .header {
+      margin-bottom: 25px;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      letter-spacing: 3px;
+      margin: 0 0 5px 0;
+      text-transform: uppercase;
+      font-weight: normal;
+    }
+
+    .header .subtitle {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 4px;
+      color: var(--subtext-color);
+    }
+
+    .divider {
+      border-top: 1px solid var(--accent-color);
+      border-bottom: 1px solid var(--accent-color);
+      height: 2px;
+      margin: 20px auto;
+      width: 90%;
+    }
+
+    .section-title {
+      font-size: 20px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin: 30px 0 15px 0;
+      font-weight: normal;
+    }
+
+    .menu-item {
+      margin-bottom: 20px;
+      padding: 0 10px;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 15px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .item-name {
+      text-align: left;
+    }
+
+    .item-price {
+      white-space: nowrap;
+      margin-left: 10px;
+    }
+
+    .item-desc {
+      text-align: left;
+      font-size: 11px;
+      line-height: 1.4;
+      letter-spacing: 0.5px;
+      color: var(--subtext-color);
+      margin-top: 4px;
+      text-transform: uppercase;
+    }
+
+    .notice-box {
+      border: 1px solid var(--accent-color);
+      padding: 12px;
+      margin: 30px auto;
+      font-size: 11px;
+      line-height: 1.4;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      width: 85%;
+      color: var(--subtext-color);
+    }
+
+    .feedback-card {
+      border-top: 1px dashed var(--accent-color);
+      padding-top: 25px;
+      margin-top: 40px;
+    }
+
+    .feedback-card h3 {
+      font-size: 16px;
+      letter-spacing: 1px;
+      font-weight: normal;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .feedback-btn {
+      display: block;
+      padding: 12px;
+      margin: 10px auto;
+      width: 80%;
+      border: 1px solid var(--accent-color);
+      color: var(--text-color);
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-radius: 4px;
+    }
+
+    .btn-positive {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <h1>MENU</h1>
+    <div class="subtitle">Come lo fa la Mamma</div>
+    <div class="subtitle">Essen wie bei Mamma</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ZUPPA -->
+  <div class="section-title">Zuppa</div>
+  <div class="menu-item">
+    <div class="item-header">
+      <span class="item-name">Tagessuppe</span>
+      <span class="item-price">7,90 €</span>
+    </div>
+    <div class="item-desc">Serviert mit Brot</div>
+  </div>
+
+  <!-- INSALATA -->
+  <div class="section-title">Insalata</div>
+  <div class="menu-item">
+    <div class="item-header">
+      <span class="item-name">Insalata Mista Feta</span>
+      <span class="item-price">11,90 €</span>
+    </div>
+    <div class="item-desc">Gemischter Salat, Fetakäse, Tomaten, Gurke, Paprika, rote Zwiebeln, Joghurt-Kräuterdressing &
+      Brot dazu</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header">
+      <span class="item-name">Insalata Mista Pollo</span>
+      <span class="item-price">11,90 €</span>
+    </div>
+    <div class="item-desc">Gemischter Salat, Hähnchenbruststreifen, Tomaten, Gurke, Paprika, Joghurt-Kräuterdressing &
+      Brot dazu</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header">
+      <span class="item-name">Insalata Mista Vegetaria</span>
+      <span class="item-price">11,90 €</span>
+    </div>
+    <div class="item-desc">Gemischter Salat, Falaffel, Tomate, Gurke, Paprika, rote Zwiebeln, Joghurt-Kräuterdressing &
+      Brot dazu</div>
+  </div>
+
+  <div class="notice-box">
+    Wir bevorzugen Kartenzahlung — Vielen Dank!<br><br>
+    Wenn Sie Fragen zu Allergenen & Zusatzstoffen haben, wenden Sie sich bitte an unsere Mitarbeiter.
+  </div>
+
+  <!-- PASTA -->
+  <div class="section-title">Pasta</div>
+  <div class="menu-item">
+    <div class="item-header">
+      <span class="item-name">Spaghetti Pomodoro</span>
+      <span class="item-price">12,90 €</span>
+    </div>
+    <div class="item-desc">Spaghetti & Tomaten-Kräutersauce</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header">
+      <span class="item-name">Spaghetti Aglio</span>
+      <span class="item-price">12,90 €</span>
+    </div>
+    <div class="item-desc">Spaghetti, Olivenöl, geröstete Knoblauchwürfel & feuriges Chili</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header">
+      <span class="item-name">Spaghetti Pesto</span>
+      <span class="item-price">12,90 €</span>
+    </div>
+    <div class="item-desc">Spaghetti & Basilikum-Pesto</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header">
+      <span class="item-name">Spaghetti Pollo</span>
+      <span class="item-price">13,90 €</span>
+    </div>
+    <div class="item-desc">Spaghetti, Hähnchenbrust, Champignons & Sahne</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header">
+      <span class="item-name">Spaghetti Bolognese</span>
+      <span class="item-price">13,90 €</span>
+    </div>
+    <div class="item-desc">Spaghetti, Rindfleisch & Gemüse</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header">
+      <span class="item-name">Spaghetti Carbonara</span>
+      <span class="item-price">13,90 €</span>
+    </div>
+    <div class="item-desc">Spaghetti, gebratene Speckstreifen & Sahne</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header">
+      <span class="item-name">Gemüse-Lasagne — Vegan</span>
+      <span class="item-price">13,50 €</span>
+    </div>
+    <div class="item-desc">Tomatensauce & Gemüse</div>
+  </div>
+
+  <!-- PIZZA -->
+  <div class="section-title">Pizza 29 cm</div>
+  <div class="menu-item">
+    <div class="item-header">
+      <span class="item-name">Pizza Margarita</span>
+      <span class="item-price">13,50 €</span>
+    </div>
+    <div class="item-desc">Tomatensauce, Mozzarella, Tomaten & Basilikum</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header">
+      <span class="item-name">Pizza Pesto</span>
+      <span class="item-price">14,50 €</span>
+    </div>
+    <div class="item-desc">Tomatensauce, Mozzarella, Tomaten, Basilikumpesto & Rucola</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header">
+      <span class="item-name">Pizza Salame</span>
+      <span class="item-price">14,50 €</span>
+    </div>
+    <div class="item-desc">Tomatensauce, Mozzarella, Tomaten & würzige Salami</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header">
+      <span class="item-name">Pizza Hawaii</span>
+      <span class="item-price">14,90 €</span>
+    </div>
+    <div class="item-desc">Tomatensauce, Mozzarella, Schinken & Ananas</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header">
+      <span class="item-name">Pizza Prosciutto e Funghi</span>
+      <span class="item-price">14,90 €</span>
+    </div>
+    <div class="item-desc">Tomatensauce, Mozzarella, Kochschinken & Champignons</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header">
+      <span class="item-name">Pizza Pollo Curry</span>
+      <span class="item-price">15,90 €</span>
+    </div>
+    <div class="item-desc">Tomatensauce, Mozzarella, Tomaten, Hähnchenbruststreifen, fruchtige Currysauce & Rucola</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header">
+      <span class="item-name">Pizza Mista</span>
+      <span class="item-price">16,90 €</span>
+    </div>
+    <div class="item-desc">Tomatensauce, Mozzarella, Salami, Kochschinken, Champignons & Peperoni</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header">
+      <span class="item-name">Pizza Spinat & Feta</span>
+      <span class="item-price">16,90 €</span>
+    </div>
+    <div class="item-desc">Tomatensauce, Mozzarella, Spinat & Feta</div>
+  </div>
+  <div class="menu-item">
+    <div class="item-header">
+      <span class="item-name">Pizza Gärten der Welt</span>
+      <span class="item-price">16,90 €</span>
+    </div>
+    <div class="item-desc">Tomatensauce, Mozzarella, Brokkoli, Spinat, Tomaten, Champignons, Paprika & Rucola</div>
+  </div>
+
+  <!-- FEEDBACK -->
+  <div class="feedback-card">
+    <h3>Hat es Ihnen geschmeckt?</h3>
+    <a href="YOUR_GOOGLE_MAPS_LINK" class="feedback-btn btn-positive">Bewertung auf Google</a>
+    <a href="mailto:info@giardinoverde.de" class="feedback-btn">Feedback senden</a>
+  </div>
+
+</body>
+</html>
