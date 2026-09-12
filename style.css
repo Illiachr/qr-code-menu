@@ -166,7 +166,8 @@ body {
   margin-top: 4px;
   text-transform: uppercase;
   letter-spacing: 0.6px;
-  
+  max-width: 22rem;
+  text-wrap: wrap;
 }
 
 .item-desc.dressing {
