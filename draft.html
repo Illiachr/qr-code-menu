@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giardino Verde - Menu</title>
+  <style>
+    :root {
+      --bg-color: #1E1E1E;
+      /* Тёмный графитовый фон из ТВ-макета */
+      --text-color: #F7F5EC;
+      /* Кремовый основной текст */
+      --accent-red: #E03D38;
+      /* Заголовки MENU */
+      --accent-green: #4C8C53;
+      /* Заголовки категорий PIZZA, PASTA */
+      --subtext-color: #D1CBBF;
+      /* Описание ингредиентов */
+      --border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: "Georgia", "Times New Roman", serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 1. Плавающая навигация по категориям */
+    .category-nav {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      background-color: #161616;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 16px;
+      z-index: 100;
+      border-bottom: 1px solid var(--border-color);
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .category-nav a {
+      color: var(--accent-green);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin: 0 12px;
+    }
+
+    /* 2. Общий контейнер */
+    .menu-container {
+      max-width: 1300px;
+      /* Ограничение для больших мониторов */
+      margin: 0 auto;
+      padding: 30px 20px;
+      box-sizing: border-box;
+    }
+
+    /* Шапка */
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      color: var(--accent-red);
+      font-size: 32px;
+      letter-spacing: 3px;
+      margin: 0 0 5px 0;
+      text-transform: uppercase;
+    }
+
+    .header .subtitle {
+      color: var(--subtext-color);
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* Разделы категорий */
+    .section-title {
+      color: var(--accent-green);
+      font-size: 22px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 8px;
+      margin: 40px 0 20px 0;
+    }
+
+    /* 3. Сетка карточек блюд (Классический CSS без Nesting) */
+    .items-grid {
+      display: block;
+      /* По умолчанию 1 колонка для мобильных */
+    }
+
+    .menu-item {
+      margin-bottom: 20px;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-weight: bold;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .item-price {
+      white-space: nowrap;
+      margin-left: 12px;
+    }
+
+    .item-desc {
+      font-size: 11px;
+      line-height: 1.4;
+      color: var(--subtext-color);
+      margin-top: 4px;
+      text-transform: uppercase;
+    }
+
+    /* 4. Адаптированность под большие разрешения (2 колонки) */
+    @media (min-width: 900px) {
+      .items-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* Две равные колонки */
+        column-gap: 40px;
+        row-gap: 10px;
+      }
+
+      .category-nav a {
+        font-size: 16px;
+        margin: 0 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Навигация -->
+  <nav class="category-nav">
+    <a href="#zuppa">Zuppa</a>
+    <a href="#insalata">Insalata</a>
+    <a href="#pasta">Pasta</a>
+    <a href="#pizza">Pizza</a>
+  </nav>
+
+  <div class="menu-container">
+
+    <div class="header">
+      <h1>MENU</h1>
+      <div class="subtitle">Come lo fa la Mamma</div>
+    </div>
+
+    <!-- ZUPPA -->
+    <h2 id="zuppa" class="section-title">ZUPPA</h2>
+    <div class="items-grid">
+      <div class="menu-item">
+        <div class="item-header">
+          <span>Tagessuppe</span>
+          <span class="item-price">7,90 €</span>
+        </div>
+        <div class="item-desc">Serviert mit Brot</div>
+      </div>
+    </div>
+
+    <!-- INSALATA -->
+    <h2 id="insalata" class="section-title">INSALATA</h2>
+    <div class="items-grid">
+      <div class="menu-item">
+        <div class="item-header">
+          <span>Insalata Mista Feta</span>
+          <span class="item-price">11,90 €</span>
+        </div>
+        <div class="item-desc">Gemischter Salat, Fetakäse, Tomaten, Gurke, Paprika, rote Zwiebeln & Brot</div>
+      </div>
+      <div class="menu-item">
+        <div class="item-header">
+          <span>Insalata Mista Pollo</span>
+          <span class="item-price">11,90 €</span>
+        </div>
+        <div class="item-desc">Gemischter Salat, Hähnchenbruststreifen, Tomaten, Gurke, Paprika & Brot</div>
+      </div>
+    </div>
+
+    <!-- PASTA -->
+    <h2 id="pasta" class="section-title">PASTA</h2>
+    <div class="items-grid">
+      <div class="menu-item">
+        <div class="item-header">
+          <span>Spaghetti Pomodoro</span>
+          <span class="item-price">12,90 €</span>
+        </div>
+        <div class="item-desc">Spaghetti & Tomaten-Kräutersauce</div>
+      </div>
+      <div class="menu-item">
+        <div class="item-header">
+          <span>Spaghetti Bolognese</span>
+          <span class="item-price">13,90 €</span>
+        </div>
+        <div class="item-desc">Spaghetti, Rindfleisch & Gemüse</div>
+      </div>
+    </div>
+
+    <!-- PIZZA -->
+    <h2 id="pizza" class="section-title">PIZZA (29 cm)</h2>
+    <div class="items-grid">
+      <div class="menu-item">
+        <div class="item-header">
+          <span>Pizza Margarita</span>
+          <span class="item-price">13,50 €</span>
+        </div>
+        <div class="item-desc">Tomatensauce, Mozzarella, Tomaten & Basilikum</div>
+      </div>
+      <div class="menu-item">
+        <div class="item-header">
+          <span>Pizza Salame</span>
+          <span class="item-price">14,50 €</span>
+        </div>
+        <div class="item-desc">Tomatensauce, Mozzarella, Tomaten & würzige Salami</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
