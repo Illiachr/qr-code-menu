@@ -1,29 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Patrick+Hand&family=Shadows+Into+Light+Two&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cabin+Sketch:wght@400;700&family=Fredericka+the+Great&family=Patrick+Hand&family=Rubik+Dirt&family=Shadows+Into+Light+Two&display=swap');
 
 :root {
   --bg-color: #181a1a;
-  --text-color: #F7F5EC;
-  --accent-red: #E03D38;
-  --accent-green: #4C8C53;
-  --subtext-color: #D1CBBF;
+  --text-color: #f7f5ec;
+  --accent-red: #c62128;
+  --accent-green: #427a38;
+  --subtext-color: #d1cbbf;
 }
 
-.amatic-sc-regular {
-  font-family: "Amatic SC", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+* {
+  box-sizing: border-box;
 }
 
-.amatic-sc-bold {
-  font-family: "Amatic SC", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.shadows-into-light-two-regular {
-  font-family: "Shadows Into Light Two", cursive;
-  font-weight: 400;
-  font-style: normal;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -35,44 +25,114 @@ body {
   font-size: 16px;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
+  box-sizing: border-box;
+}
+
+.header {
+  margin-bottom: 1.5rem;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* height: var(--header-height); */
+  background-color: var(--bg-color);
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  padding: 1rem 0 0 2.4rem;
+  z-index: 100;
+  border-bottom: 1px solid var(--bg-color);
+}
+
+.header-wrapper {
+  position: relative;
+  width: 100%;
 }
 
 /* Menu container holding relative context for decorative background elements */
 .menu-container {
   position: relative;
   width: 100%;
-  max-width: 600px;
-  padding: 40px 20px;
-  box-sizing: border-box;
+  max-width: 1300px;
+  padding: 40px 20px 0px 20px;
   overflow: hidden;
   /* Keeps background images contained */
+  margin: 0 auto;
 }
 
-/* Background Assets Setup */
+.menu-title {
+  display: inline-block;
+  position: relative;
+}
+
+.menu-logo {
+  width: calc(2263px * 0.16);
+  height: calc(767px * 0.16);
+  z-index: 1;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 10rem;
+  margin-bottom: 4rem;
+}
+
+.section.one-column {
+  grid-template-columns: 1fr;
+}
+
+.section-header {
+  color: var(--accent-green);
+  font-size: 3rem;
+  font-family: "Cabin Sketch", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  margin-bottom: 1rem;
+}
+
+.left-side {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 60vh;
+}
+
+.right-side {
+  position: relative;
+}
+
 .bg-asset {
   position: absolute;
-  pointer-events: none;
+  width: 120px;
   /* Prevents interference with text selection or clicks */
-  opacity: 0.25;
-  /* Blends artwork softly into the background */
-  z-index: 0;
+  pointer-events: none;
+  z-index: -1;
 }
 
 /* Positioning individual artwork elements */
+.bg-loeffel {
+  transform: translate(100%, 130%);
+}
+
 .bg-basilikum {
-  top: 150px;
-  /* left: 250px; */
-  transform: translate(150%, 100%);
-  width: 120px;
+  top: 2.4rem;
 }
 
 .bg-tomato {
-  top: 15px;
-  width: 100px;
-  /* transform: rotate(10deg); */
+  /* transform: translate(280%, -120%); */
+  right: 10rem;
+  width: 130px;
 }
 
 .bg-pizza {
@@ -81,132 +141,107 @@ body {
   opacity: 0.18;
 }
 
-/* Foreground Content Layer */
-.content-layer {
-  position: relative;
-  z-index: 1;
+.zuppa-title-img {
+  width: calc(1650px * 0.12);
+  height: calc(403px * 0.12);
 }
 
-.header {
-  text-align: center;
-  margin-bottom: 30px;
+.insalata-title-img {
+  width: calc(2315px * 0.12);
+  height: calc(429px * 0.12);
 }
 
-.menu-title {
-  display: inline-block;
-  img {
-    width: 226px;
-    height: 76px;
-  }
+.pizza-title-img {
+  width: calc(2742px * 0.12);
+  height: calc(358px * 0.12);
 }
 
-.header h1 {
-  color: var(--accent-red);
-  font-size: 32px;
-  letter-spacing: 2px;
-  margin: 0;
-}
-
-.header .subtitle {
-  color: var(--accent-green);
-  font-size: 13px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  margin-top: 5px;
-}
-
-.section-title {
-  color: var(--accent-green);
-  font-size: 22px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  padding-bottom: 5px;
-  margin-top: 30px;
-
-  img {
-    width: calc(165px * 0.7);
-    height: calc(40px * 0.7);
-  }
-
-  .insalata-title-img {
-    width: calc(231px * 0.7);
-    height: calc(42px * 0.7);
-  }
-
-  .pizza-title-img {
-    width: calc(274px * 0.7);
-    height: calc(35px * 0.7);
-  }
-
-  .pasta-title-img {
-    width: calc(119px * 0.85);
-    height: calc(26px * 0.85);
-  }
+.pasta-title-img {
+  width: calc(1192px * 0.12);
+  height: calc(267px * 0.12);
 }
 
 .menu-item {
-  margin: 15px 0;
+  margin-bottom: 0.6rem;
 }
 
 .item-header {
   display: flex;
-  justify-content: space-between;
+  column-gap: 1rem;
   font-family: "Shadows Into Light Two", cursive;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 1.6rem;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
 .item-desc {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: "Patrick Hand", cursive;
   font-weight: 400;
   color: var(--subtext-color);
-  margin-top: 4px;
+  margin-top: 0.12rem;
   text-transform: uppercase;
   letter-spacing: 0.6px;
-  max-width: 22rem;
+  max-width: 28rem;
   text-wrap: wrap;
 }
 
 .item-desc.dressing {
   margin-top: 2rem;
-  margin-left: 4.5rem;
-
-  ul {
-    margin: 0;
-    padding: 0;
-    margin-left: 1.5rem;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }
 
-footer {
-  margin-top: 4rem;
+.list-title {
+  margin-right: 2rem;
+}
 
-  .notice-box {
-    display: flex;
-    flex-direction: column;
-    row-gap: 0.5rem;
-  }
+.item-desc.dressing ul {
+  margin: 0;
+  padding: 0;
+  margin-left: 1.2rem;
+}
 
-  .footer-ec-karte-notice {
-    width: 297px;
-    height: 14px;
-  }
+.footer {
+  width: 100%;
+  max-width: 1300px;
+  padding: 20px;
+  margin: 0 auto
+}
 
-  .notice-box__fragen {
-    display: flex;
-    flex-wrap: wrap;
-  }
 
-  .footer-fragen-notice {
-    width: 237px;
-    height: 10px;
-  }
+.notice-box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
 
-  .footer-fragen-notice-ext {
-    width: 188px;
-    height: 10px;
+.footer-ec-karte-notice {
+  width: calc(972px * 0.5);
+}
+
+.notice-box__fragen {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-fragen-notice {
+  width: calc(2940px * 0.14);
+  height: calc(90px * 0.14);
+}
+
+.footer-fragen-notice-ext {
+  width: calc(2330px * 0.14);
+  height: calc(90px * 0.14);
+}
+
+@media (max-width: 576px) {
+  .section {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 10rem;
+    margin-bottom: 4rem;
   }
 }
