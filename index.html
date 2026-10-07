@@ -1,203 +1,249 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giardino Verde - Speisekarte</title>
   <link rel="stylesheet" href="style.css">
+  <title>Speisekarte TV 1</title>
 </head>
+
 <body>
   <div class="menu-container">
-    <!-- Background Artwork Layer -->
-    <img src="img/basilikum.png" class="bg-asset bg-basilikum" alt="" />
-    <img src="img/tomato.png" class="bg-asset bg-tomato" alt="" />
-    <img src="img/pizza.png" class="bg-asset bg-pizza" alt="" />
-    <!-- Interactive / Text Layer -->
+    <!-- TODO: Add Background Images -->
     <div class="content-layer">
-      <div class="header">
-        <span class="menu-title">
-          <img src="img/menu-title-photoroom.png" alt="Come lo fa la Mamma" />
-        </span>
+      <div class="header fixed-header">
+        <div class="header-wrapper">
+          <span class="menu-title">
+            <img class="menu-logo" src="img/menu-title-photoroom.png" alt="Come lo fa la Mamma" />
+            <img class="bg-asset bg-basilikum" src="img/basilikum-880-660-bg.png" alt="Basilikum">
+          </span>
+          <img class="bg-asset bg-tomato" src="img/tomato-1080-1190-bg.png" alt="Tomato">
+        </div>
       </div>
-      <div class="section-title">
-        <img src="img/zuppa-title.png" alt="zuppa">
-      </div>
-      <div class="menu-item">
+      <!-- /.header -->
+      <section class="section section-one">
+        <div class="left-side">
+          <div class="section-title">
+            <img class="zuppa-title-img" src="img/zuppa-title.png" alt="zuppa">
+          </div>
+          <div class="menu-item">
+            <div class="item-header">
+              <span>Tagessuppe</span>
+              <span>7,90&nbsp;€</span>
+            </div>
+            <div class="item-desc">dazu Brot</div>
+          </div>
+          <img class="bg-asset bg-loeffel" src="img/loeffel-840-550-bg.png" alt="Loeffel">
+        </div>
+        <div class="right-side">
+          <div class="section-title">
+            <img class="insalata-title-img" src="img/insalata-title.png" alt="insalata">
+          </div>
+          <div class="menu-item">
+            <div class="item-header">
+              <span>Insalata Mista Feta</span>
+              <span>11,90&nbsp;€</span>
+            </div>
+            <div class="item-desc">Gemischter Salat, Fetakäse, Tomaten, Gurke, Paprika, rote&nbsp;Zwiebeln&nbsp;& dazu
+              Brot</div>
+          </div>
+          <div class="menu-item">
+            <div class="item-header">
+              <span>Insalata Mista Pollo</span>
+              <span>11,90&nbsp;€</span>
+            </div>
+            <div class="item-desc">Gemischter Salat, Hähnchenbruststreifen, Tomaten, Gurke, Paprika&nbsp;& dazu Brot
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-header">
+              <span>Insalata Mista Vegetaria</span>
+              <span>11,90&nbsp;€</span>
+            </div>
+            <div class="item-desc">Gemischter Salat, Falaffel, Tomate, Gurke, Paprika, rote&nbsp;Zwiebeln&nbsp;& dazu
+              Brot</div>
+          </div>
+          <div class="menu-item">
+            <div class="item-desc dressing">
+              <div class="dressing-wrapper">
+                <div class="list-title">Wahlweise mit:</div>
+                <ul>
+                  <li>Joghurt-Kräüterdressing</li>
+                  <li>Mango-Honig-Senf-Dressing</li>
+                  <li>Balsamico-Dressing</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-title">
+          <img class="pizza-title-img" src="img/pizza-title.png" alt="pizza">
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <span>Pizza Margarita</span>
+            <span>13,50&nbsp;€</span>
+          </div>
+          <div class="item-desc">Tomatensauce, Mozzarella, Tomaten&nbsp;& Basilikum</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <span>Pizza Pesto</span>
+            <span>14,50&nbsp;€</span>
+          </div>
+          <div class="item-desc">Tomatensauce, Mozzarella, Tomaten, Basilikumpesto&nbsp;& Rucola</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <span>Pizza Salame</span>
+            <span>14,50&nbsp;€</span>
+          </div>
+          <div class="item-desc">Tomatensauce, Mozzarella, Tomaten&nbsp;& würzige&nbsp;Salami</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <span>Pizza Hawaii</span>
+            <span>14,90&nbsp;€</span>
+          </div>
+          <div class="item-desc">Tomatensauce, Mozzarella, Schinken&nbsp;& Ananas</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <span>Pizza Prosciutto e Funghi</span>
+            <span>14,90&nbsp;€</span>
+          </div>
+          <div class="item-desc">Tomatensauce, Mozzarella, Kochschinken&nbsp;& Champignons</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <span>Pizza Pollo Curry</span>
+            <span>15,90&nbsp;€</span>
+          </div>
+          <div class="item-desc">Tomatensauce, Mozzarella, Tomaten, Hähnchenbruststreifen, fruchtige Currysauce&nbsp;&
+            Rucola
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <span>Pizza Mista</span>
+            <span>16,90&nbsp;€</span>
+          </div>
+          <div class="item-desc">Tomatensauce, Mozzarella, Salami, Kochschinken, Champignons&nbsp;& Peperoni</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <span>Pizza Spinat&nbsp;& Feta</span>
+            <span>16,90&nbsp;€</span>
+          </div>
+          <div class="item-desc">Tomatensauce, Mozzarella, Spinat&nbsp;& Feta</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-header">
+            <span>Pizza Gärten der Welt</span>
+            <span>16,90&nbsp;€</span>
+          </div>
+          <div class="item-desc">Tomatensauce, Mozzarella, Brokkoli, Spinat, Tomaten, Champignons, Paprika&nbsp;& Rucola
+          </div>
+        </div>
+      </section>
+      <section class="section one-column">
+        <h3 class="section-header">
+          dessert-pizza 25cm
+        </h3>
+        <div class="menu-item">
+          <div class="item-header">
+            <span>banane & schokolade</span>
+            <span>8,90&nbsp;€</span>
+          </div>
+          <div class="item-desc">mit weissem crunch</div>
+        </div>
+        <div class="menu-item">
         <div class="item-header">
-          <span>Tagessuppe</span>
-          <span>7,90&nbsp;€</span>
+          <span>mandarine & erdbeer</span>
+          <span>8,90&nbsp;€</span>
         </div>
-        <div class="item-desc">dazu Brot</div>
+        <div class="item-desc">mit weissem crunch</div>
       </div>
-      <div class="section-title">
-        <img class="insalata-title-img" src="img/insalata-title.png" alt="zuppa">
-      </div>
-      <div class="menu-item">
-        <div class="item-header">
-          <span>Insalata Mista Feta</span>
-          <span>11,90&nbsp;€</span>
+      </section>
+      <section class="section">
+        <div class="section-title">
+          <img class="pasta-title-img" src="img/pasta-title.png" alt="pasta">
         </div>
-        <div class="item-desc">Gemischter Salat, Fetakäse, Tomaten, Gurke, Paprika, rote Zwiebeln&nbsp;& dazu Brot</div>
-      </div>
-      <div class="menu-item">
-        <div class="item-header">
-          <span>Insalata Mista Pollo</span>
-          <span>11,90&nbsp;€</span>
+        <div class="menu-item">
+          <div class="item-header">
+            <span>Spaghetti Pomodoro</span>
+            <span>12,90&nbsp;€</span>
+          </div>
+          <div class="item-desc">Spaghetti&nbsp;& Tomaten-Kräutersauce</div>
         </div>
-        <div class="item-desc">Gemischter Salat, Hähnchenbruststreifen, Tomaten, Gurke, Paprika&nbsp;& dazu Brot</div>
-      </div>
-      <div class="menu-item">
-        <div class="item-header">
-          <span>Insalata Mista Vegetaria</span>
-          <span>11,90&nbsp;€</span>
+        <div class="menu-item">
+          <div class="item-header">
+            <span>Spaghetti Aglio</span>
+            <span>12,90&nbsp;€</span>
+          </div>
+          <div class="item-desc">Spaghetti, Olivenöl, geröstete Knoblauchwürfel&nbsp;& feuriges Chili</div>
         </div>
-        <div class="item-desc">Gemischter Salat, Falaffel, Tomate, Gurke, Paprika, rote Zwiebeln,&nbsp;& dazu Brot</div>
-      </div>
-      <div class="menu-item">
-        <div class="item-desc dressing">
-          <div class="list-title">Wahlweise mit:</div>
-          <ul>
-            <li>Joghurt-Kräüterdressing</li>
-            <li>Mango-Honig-Senf-Dressing</li>
-            <li>Balsamico-Dressing</li>
-          </ul>
+        <div class="menu-item">
+          <div class="item-header">
+            <span>Spaghetti Pesto</span>
+            <span>12,90&nbsp;€</span>
+          </div>
+          <div class="item-desc">Spaghetti&nbsp;& Basilikum-Pesto</div>
         </div>
-      </div>
-      <div class="section-title">
-        <img class="pizza-title-img" src="img/pizza-title.png" alt="zuppa">
-      </div>
-      <div class="menu-item">
-        <div class="item-header">
-          <span>Pizza Margarita</span>
-          <span>13,50&nbsp;€</span>
+        <div class="menu-item">
+          <div class="item-header">
+            <span>Spaghetti Pollo</span>
+            <span>13,90&nbsp;€</span>
+          </div>
+          <div class="item-desc">Spaghetti, Hähnchenbrust, Champignons&nbsp;& Sahne</div>
         </div>
-        <div class="item-desc">Tomatensauce, Mozzarella, Tomaten&nbsp;& Basilikum</div>
-      </div>
-      <div class="menu-item">
-        <div class="item-header">
-          <span>Pizza Pesto</span>
-          <span>14,50&nbsp;€</span>
+        <div class="menu-item">
+          <div class="item-header">
+            <span>Spaghetti Bolognese</span>
+            <span>13,90&nbsp;€</span>
+          </div>
+          <div class="item-desc">Spaghetti, Rindfleisch&nbsp;& Gemüse</div>
         </div>
-        <div class="item-desc">Tomatensauce, Mozzarella, Tomaten, Basilikumpesto&nbsp;& Rucola</div>
-      </div>
-      <div class="menu-item">
-        <div class="item-header">
-          <span>Pizza Salame</span>
-          <span>14,50&nbsp;€</span>
+        <div class="menu-item">
+          <div class="item-header">
+            <span>Spaghetti Carbonara</span>
+            <span>13,90&nbsp;€</span>
+          </div>
+          <div class="item-desc">Spaghetti, Sahne&nbsp;& Speck</div>
         </div>
-        <div class="item-desc">Tomatensauce, Mozzarella, Tomaten&nbsp;& würzige&nbsp;Salami</div>
-      </div>
-      <div class="menu-item">
-        <div class="item-header">
-          <span>Pizza Hawaii</span>
-          <span>14,90&nbsp;€</span>
+        <div class="menu-item">
+          <div class="item-header">
+            <span>Spaghetti Pepe</span>
+            <span>13,90&nbsp;€</span>
+          </div>
+          <div class="item-desc">Spaghetti, Parmesan-Sahnesauce&nbsp;& schwarzer&nbsp;Pfeffer</div>
         </div>
-        <div class="item-desc">Tomatensauce, Mozzarella, Schinken&nbsp;& Ananas</div>
-      </div>
-      <div class="menu-item">
-        <div class="item-header">
-          <span>Pizza Prosciutto e Funghi</span>
-          <span>14,90&nbsp;€</span>
+        <div class="menu-item">
+          <div class="item-header">
+            <span>Lasagne Griglia</span>
+            <span>13,90&nbsp;€</span>
+          </div>
+          <div class="item-desc">Tomatenwürfel, Käse, Schinttlauch-B&eacute;chamel, Grillgemüsesosse&nbsp;& dazu ein
+            kleiner
+            Salat</div>
         </div>
-        <div class="item-desc">Tomatensauce, Mozzarella, Kochschinken&nbsp;& Champignons</div>
-      </div>
-      <div class="menu-item">
-        <div class="item-header">
-          <span>Pizza Pollo Curry</span>
-          <span>15,90&nbsp;€</span>
-        </div>
-        <div class="item-desc">Tomatensauce, Mozzarella, Tomaten, Hähnchenbruststreifen, fruchtige Currysauce&nbsp;& Rucola</div>
-      </div>
-      <div class="menu-item">
-        <div class="item-header">
-          <span>Pizza Mista</span>
-          <span>16,90&nbsp;€</span>
-        </div>
-        <div class="item-desc">Tomatensauce, Mozzarella, Salami, Kochschinken, Champignons&nbsp;& Peperoni</div>
-      </div>
-      <div class="menu-item">
-        <div class="item-header">
-          <span>Pizza Spinat&nbsp;& Feta</span>
-          <span>16,90&nbsp;€</span>
-        </div>
-        <div class="item-desc">Tomatensauce, Mozzarella, Spinat&nbsp;& Feta</div>
-      </div>
-      <div class="menu-item">
-        <div class="item-header">
-          <span>Pizza Gärten der Welt</span>
-          <span>16,90&nbsp;€</span>
-        </div>
-        <div class="item-desc">Tomatensauce, Mozzarella, Brokkoli, Spinat, Tomaten, Champignons, Paprika&nbsp;& Rucola</div>
-      </div>
-      <div class="section-title">
-        <img class="pasta-title-img" src="img/pasta-title.png" alt="zuppa">
-      </div>
-      <div class="menu-item">
-        <div class="item-header">
-          <span>Spaghetti Pomodoro</span>
-          <span>12,90&nbsp;€</span>
-        </div>
-        <div class="item-desc">Spaghetti&nbsp;& Tomaten-Kräutersauce</div>
-      </div>
-      <div class="menu-item">
-  <div class="item-header">
-    <span>Spaghetti Aglio</span>
-    <span>12,90&nbsp;€</span>
-  </div>
-  <div class="item-desc">Spaghetti, Olivenöl, geröstete Knoblauchwürfel&nbsp;& feuriges Chili</div>
-      </div>
-      <div class="menu-item">
-        <div class="item-header">
-          <span>Spaghetti Pesto</span>
-          <span>12,90&nbsp;€</span>
-        </div>
-        <div class="item-desc">Spaghetti&nbsp;& Basilikum-Pesto</div>
-      </div>
-      <div class="menu-item">
-        <div class="item-header">
-          <span>Spaghetti Pollo</span>
-          <span>13,90&nbsp;€</span>
-        </div>
-        <div class="item-desc">Spaghetti, Hähnchenbrust, Champignons&nbsp;& Sahne</div>
-      </div>
-      <div class="menu-item">
-        <div class="item-header">
-          <span>Spaghetti Bolognese</span>
-          <span>13,90&nbsp;€</span>
-        </div>
-        <div class="item-desc">Spaghetti, Rindfleisch&nbsp;& Gemüse</div>
-      </div>
-      <div class="menu-item">
-        <div class="item-header">
-          <span>Spaghetti Carbonara</span>
-          <span>13,90&nbsp;€</span>
-        </div>
-        <div class="item-desc">Spaghetti, Sahne&nbsp;& Speck</div>
-      </div>
-      <div class="menu-item">
-        <div class="item-header">
-          <span>Spaghetti Pepe</span>
-          <span>13,90&nbsp;€</span>
-        </div>
-        <div class="item-desc">Spaghetti, Parmesan-Sahnesauce&nbsp;& schwarzer&nbsp;Pfeffer</div>
-      </div>
-      <div class="menu-item">
-        <div class="item-header">
-          <span>Lasagne Griglia</span>
-          <span>13,90&nbsp;€</span>
-        </div>
-        <div class="item-desc">Tomatenwürfel, Käse, Schinttlauch-B&eacute;chamel, Grillgemüsesosse&nbsp;& dazu ein kleiner Salat</div>
-      </div>
+      </section>
     </div>
   </div>
+  </div>
+  <!-- /.menu-container -->
 </body>
-<footer>
+<footer class="footer">
   <div class="notice-box">
     <img class="footer-ec-karte-notice" src="img/footer-kartezahlung.png" alt="EC Zahlung Info">
-      <div class="notice-box__fragen">
-        <img class="footer-fragen-notice" src="img/footer-allergien.png" alt="Fragen Info">
-        <img class="footer-fragen-notice-ext" src="img/footer-allergien-ext.png" alt="Fragen Info">
-      </div>
+    <div class="notice-box__fragen">
+      <img class="footer-fragen-notice" src="img/footer-allergien-2940-90.png" alt="Fragen Info">
+      <img class="footer-fragen-notice-ext" src="img/footer-allergien-ext-2330-90.png" alt="Fragen Info">
     </div>
+  </div>
 </footer>
+
 </html>
