@@ -75,10 +75,17 @@ body {
 }
 
 .section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-top: 10rem;
   margin-bottom: 4rem;
+}
+
+.section-first {
+  margin-top: 10rem;
+}
+
+.section-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 8rem;
 }
 
 .section.one-column {
@@ -98,6 +105,15 @@ body {
 
 .section-title {
   margin-bottom: 1rem;
+}
+
+.column {}
+
+.column-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .left-side {
@@ -165,14 +181,41 @@ body {
   margin-bottom: 0.6rem;
 }
 
+.menu-extras {
+  margin-top: 2rem;
+  padding-left: 1.8rem;
+}
+
+.section-content.menu-extras {
+  column-gap: 0.8rem;
+}
+
+.section-footer {
+  margin-top: 4rem;
+}
+
+.section-footer span {
+  font-size: 1.6rem;
+  font-family: "Patrick Hand", cursive;
+  font-weight: 400;
+  margin-top: 0.12rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
 .item-header {
   display: flex;
+  justify-content: space-between;
   column-gap: 1rem;
   font-family: "Shadows Into Light Two", cursive;
   font-weight: 700;
   font-size: 1.6rem;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+.item-header .transparent-text {
+  color: transparent;
 }
 
 .item-desc {
@@ -185,6 +228,13 @@ body {
   letter-spacing: 0.6px;
   max-width: 28rem;
   text-wrap: wrap;
+}
+
+.item-desc.item-extra {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  font-size: 1.4rem;
 }
 
 .item-desc.dressing {
