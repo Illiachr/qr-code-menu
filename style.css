@@ -25,7 +25,6 @@ body {
   font-size: 16px;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 .header {
@@ -214,8 +213,27 @@ body {
   letter-spacing: 2px;
 }
 
-.item-header .transparent-text {
-  color: transparent;
+.item-header.grid {
+  display: grid;
+  grid-template-columns: 1fr 60px auto;
+  /* [Name] [Volume Column] [Price] */
+  column-gap: 1rem;
+  align-items: baseline;
+  font-family: "Shadows Into Light Two", cursive;
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+/* Align volume to the left or right inside its dedicated column */
+.item-size {
+  text-align: left;
+  color: var(--text-color);
+}
+
+.item-price {
+  text-align: left;
+  white-space: nowrap;
 }
 
 .item-desc {
@@ -254,44 +272,138 @@ body {
   margin-left: 1.2rem;
 }
 
+/* Footer Container */
 .footer {
   width: 100%;
   max-width: 1300px;
-  padding: 20px;
-  margin: 0 auto
+  /* Matches your menu-container */
+  margin: 2rem auto 0 auto;
+  padding: 0 16px 2rem 16px;
+  box-sizing: border-box;
 }
 
-
+/* Text Notice Box */
 .notice-box {
-  display: flex;
-  flex-direction: column;
-  row-gap: 0.5rem;
+  border: 1px solid var(--subtext-color);
+  padding: 1rem 1.2rem;
+  text-align: center;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.03);
+  /* Subtle background accent */
 }
 
-.footer-ec-karte-notice {
-  width: calc(972px * 0.5);
+.notice-payment {
+  font-family: "Shadows Into Light Two", cursive;
+  font-size: 1.3rem;
+  color: var(--text-color);
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.notice-box__fragen {
-  display: flex;
-  flex-wrap: wrap;
+.notice-allergies {
+  font-family: "Patrick Hand", cursive;
+  font-size: 1.1rem;
+  color: var(--subtext-color);
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 1.3;
 }
 
-.footer-fragen-notice {
-  width: calc(2940px * 0.14);
-  height: calc(90px * 0.14);
-}
-
-.footer-fragen-notice-ext {
-  width: calc(2330px * 0.14);
-  height: calc(90px * 0.14);
-}
-
+/* Mobile Adjustments */
 @media (max-width: 576px) {
+  .menu-container {
+    max-width: 100%;
+    padding: 0 1rem;
+    margin: 0 auto;
+  }
+
+  .fixed-header {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-wrapper {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+
+  .menu-logo {
+    width: calc(2263px * 0.11);
+    height: auto;
+  }
+
   .section {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin-top: 10rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2.2rem;
+  }
+
+  .section-header {
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.15rem;
+}
+
+  .section-content {
+    display: block;
+    width: 100%;
+  }
+
+  .section-footer span {
+    font-size: 1.2rem;
+    display: block;
+    text-align: center;
+  }
+
+    .item-header.grid {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    grid-template-columns: 1fr auto auto;
+  }
+
+  .item-desc {
+    font-size: 1.05rem;
+    /* Patrick Hand renders slightly small; keeping it ~1.05rem ensures readability */
+    max-width: 100%;
+    line-height: 1.25;
+    margin-top: 0.2rem;
+  }
+
+  .item-desc.dressing {
+    align-items: center;
+    /* Center dressing box on mobile */
+    margin-top: 1.2rem;
+  }
+  
+  .item-desc.item-extra {
+    width: 90%;
+  }
+
+  .section-footer span {
+    font-size: 1.2rem;
+    display: block;
+    text-align: center;
+  }
+
+  .list-title {
+    margin-right: 0;
+    font-size: 1.1rem;
+  }
+
+  .footer {
+    max-width: 100%;
+    padding: 0 1rem 1.5rem 1rem;
+  }
+
+  .notice-payment {
+    font-size: 1.1rem;
+  }
+
+  .notice-allergies {
+    font-size: 0.95rem;
   }
 }
