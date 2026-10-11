@@ -113,6 +113,11 @@ body {
   height: 100%;
 }
 
+.column-flex--top-aligned {
+  justify-content: flex-start;
+  padding-top: 6rem;
+}
+
 .left-side {
   position: relative;
   display: flex;
@@ -343,6 +348,14 @@ body {
   .section-content {
     display: block;
     width: 100%;
+  }
+
+  .column-flex {
+    display: block;
+  }
+  
+  .column-flex--top-aligned {
+    padding-top: 0;
   }
 
   .section-footer span {
