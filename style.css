@@ -246,6 +246,10 @@ body {
   text-wrap: wrap;
 }
 
+.item-desc--size-l {
+  font-size: 1.2rem;
+}
+
 .item-desc.item-extra {
   display: flex;
   justify-content: space-between;
@@ -380,6 +384,10 @@ body {
     max-width: 100%;
     line-height: 1.25;
     margin-top: 0.2rem;
+  }
+
+  .item-desc--size-l {
+    font-size: 1.05rem;
   }
 
   .item-desc.dressing {
