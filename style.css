@@ -250,6 +250,10 @@ body {
   font-size: 1.2rem;
 }
 
+.desc--small {
+  text-transform: lowercase;
+}
+
 .item-desc.item-extra {
   display: flex;
   justify-content: space-between;
