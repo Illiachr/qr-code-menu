@@ -87,8 +87,8 @@ body {
   column-gap: 8rem;
 }
 
-.section.one-column {
-  grid-template-columns: 1fr;
+.section--single-column {
+  grid-template-columns: 1fr 0.5fr;
 }
 
 .section-header {
@@ -109,7 +109,7 @@ body {
 .section-subtitle {
   font-family: "Shadows Into Light Two", cursive;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-top: 1rem;
@@ -276,10 +276,13 @@ body {
 }
 
 .item-desc.item-extra {
-  display: flex;
-  justify-content: space-between;
   width: 70%;
   font-size: 1.4rem;
+}
+
+.desc-title {
+  display: flex;
+  justify-content: space-between;
 }
 
 .item-desc.dressing {
@@ -344,7 +347,25 @@ body {
 }
 
 /* Mobile Adjustments */
-@media (max-width: 576px) {
+@media (max-width: 769px) {
+  .menu-logo {
+    width: calc(2263px * 0.11);
+    height: auto;
+  }
+
+  .section-subtitle {
+    font-size: 1.6rem;
+  }
+
+  .item-header {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
+
+}
+
+@media (max-width: 671px) {
   .menu-container {
     max-width: 100%;
     padding: 0 1rem;
@@ -353,20 +374,16 @@ body {
 
   .fixed-header {
     padding: 1rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   .header-wrapper {
     width: 100%;
     max-width: 400px;
-    text-align: center;
+    padding-left: 1.6rem;
   }
 
-  .menu-logo {
-    width: calc(2263px * 0.11);
-    height: auto;
+  .menu-extras {
+    padding-left: 0;
   }
 
   .section {
@@ -374,7 +391,6 @@ body {
   }
 
   .section-header {
-    font-size: 2.4rem;
     text-align: center;
     margin-bottom: 0.8rem;
     letter-spacing: 0.15rem;
@@ -393,16 +409,16 @@ body {
     padding-top: 0;
   }
 
+  .column--center-aligned {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .section-footer span {
     font-size: 1.2rem;
     display: block;
     text-align: center;
-  }
-
-  .item-header {
-    font-size: 1.3rem;
-    letter-spacing: 1px;
-    line-height: 1.2;
   }
 
   .menu-item--dotted .item-header {
@@ -419,6 +435,7 @@ body {
     max-width: 100%;
     line-height: 1.25;
     margin-top: 0.2rem;
+    max-width: 18rem;
   }
 
   .item-desc--size-l {
@@ -432,7 +449,7 @@ body {
   }
   
   .item-desc.item-extra {
-    width: 90%;
+    max-width: 90%;
   }
 
   .section-footer span {
@@ -457,5 +474,26 @@ body {
 
   .notice-allergies {
     font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 577px) {
+  .fixed-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-wrapper {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .section-header {
+    font-size: 2.4rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.4rem;
   }
 }
