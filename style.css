@@ -564,6 +564,7 @@ body {
   }
   
   .item-desc.item-extra {
+    width: 100%;
     max-width: 90%;
   }
 
