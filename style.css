@@ -10,6 +10,7 @@
 
 * {
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 html {
@@ -41,7 +42,7 @@ body {
   /* display: flex;
   justify-content: space-between;
   align-items: center; */
-  padding: 1rem 0 0 2.4rem;
+  padding: 1rem 1rem 0 2.4rem;
   z-index: 100;
   border-bottom: 1px solid var(--bg-color);
 }
@@ -49,6 +50,53 @@ body {
 .header-wrapper {
   position: relative;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.category-nav {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 2rem;
+  margin-right: auto;
+  padding: 0.8rem 1rem;
+  white-space: nowrap;
+}
+
+.category-nav a {
+  color: var(--accent-green);
+  text-decoration: none;
+  font-family: "Patrick Hand", cursive;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+/* .category-nav a:not(:last-of-type) {
+  border-right: 2px solid var(--accent-green);
+} */
+
+.nav-links a {
+  color: var(--accent-green);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.category-nav a:hover {
+  color: var(--text-color);
+  background-color: rgba(66, 122, 56, 0.15);
+  /* Полупрозрачный зеленый фон */
+  box-shadow: inset 0 0 0 1px rgba(66, 122, 56, 0.3);
+  /* Тонкая рамка «мелом» */
 }
 
 /* Menu container holding relative context for decorative background elements */
@@ -68,13 +116,14 @@ body {
 }
 
 .menu-logo {
-  width: calc(2263px * 0.16);
-  height: calc(767px * 0.16);
+  width: calc(2263px * 0.12);
+  height: auto;
   z-index: 1;
 }
 
 .section {
   margin-bottom: 4rem;
+  scroll-margin-top: 10rem;
 }
 
 .section-first {
@@ -87,8 +136,8 @@ body {
   column-gap: 8rem;
 }
 
-.section.one-column {
-  grid-template-columns: 1fr;
+.section--single-column {
+  grid-template-columns: 1fr 0.5fr;
 }
 
 .section-header {
@@ -103,6 +152,16 @@ body {
 }
 
 .section-title {
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-family: "Shadows Into Light Two", cursive;
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -183,6 +242,17 @@ body {
   margin: 1rem 0;
 }
 
+.menu-item--dotted {
+  border: 2px dotted #ffffff;
+  padding: 0.8rem;
+}
+
+.menu-item--dotted .item-header {
+  font-family: "Cabin Sketch", sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
 .menu-extras {
   margin-top: 2rem;
   padding-left: 1.8rem;
@@ -242,7 +312,7 @@ body {
   margin-top: 0.12rem;
   text-transform: uppercase;
   letter-spacing: 0.6px;
-  max-width: 28rem;
+  max-width: 22rem;
   text-wrap: wrap;
 }
 
@@ -255,10 +325,13 @@ body {
 }
 
 .item-desc.item-extra {
-  display: flex;
-  justify-content: space-between;
   width: 70%;
   font-size: 1.4rem;
+}
+
+.desc-title {
+  display: flex;
+  justify-content: space-between;
 }
 
 .item-desc.dressing {
@@ -316,8 +389,99 @@ body {
   line-height: 1.3;
 }
 
+.section-content--hidden {
+  display: none;
+  opacity: 0;
+  overflow: hidden;
+}
+
+/* Mobile Navigation Menu */
+
+.burger-btn {
+  background: transparent;
+  padding: 8px 15px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.burger-btn span {
+  display: block;
+  width: 4px;
+  height: 4px;
+  background: #e0e0e0;
+  margin: 3px 0;
+  border-radius: 4px;
+  transition: all 0.4s ease-in-out;
+}
+
+.burger-btn:focus span:first-child {
+  transform-origin: 2px 9px;
+  transform: rotate(-90deg);
+}
+
+.burger-btn:focus span:last-child {
+  transform-origin: 2px -5px;
+  transform: rotate(-90deg);
+}
+
 /* Mobile Adjustments */
-@media (max-width: 576px) {
+@media (max-width: 769px) {
+  .menu-logo {
+    width: calc(2263px * 0.11);
+    height: auto;
+  }
+
+  .category-nav {
+    position: fixed; 
+    inset: 0;
+    background-color: rgba(24, 26, 26, 0.98);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .category-nav a {
+    font-size: 1.8rem;
+  }
+
+  .burger-btn {
+    display: initial;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .burger-btn:focus + .category-nav {
+    transform: translateY(0);
+  }
+
+  .section-subtitle {
+    font-size: 1.6rem;
+  }
+
+  .section--single-column {
+    grid-template-columns: 1fr 0.3fr;
+  }
+
+  .item-header {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
+
+}
+
+@media (max-width: 671px) {
   .menu-container {
     max-width: 100%;
     padding: 0 1rem;
@@ -326,20 +490,15 @@ body {
 
   .fixed-header {
     padding: 1rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   .header-wrapper {
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
+    padding-left: 1.6rem;
+    padding-right: 1.4rem;
   }
 
-  .menu-logo {
-    width: calc(2263px * 0.11);
-    height: auto;
+  .menu-extras {
+    padding-left: 0;
   }
 
   .section {
@@ -347,7 +506,6 @@ body {
   }
 
   .section-header {
-    font-size: 2.4rem;
     text-align: center;
     margin-bottom: 0.8rem;
     letter-spacing: 0.15rem;
@@ -366,16 +524,20 @@ body {
     padding-top: 0;
   }
 
+  .column--center-aligned {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .section-footer span {
     font-size: 1.2rem;
     display: block;
     text-align: center;
   }
 
-  .item-header {
-    font-size: 1.3rem;
-    letter-spacing: 1px;
-    line-height: 1.2;
+  .menu-item--dotted .item-header {
+    font-size: 1.8rem;
   }
 
   .item-header.grid {
@@ -388,6 +550,7 @@ body {
     max-width: 100%;
     line-height: 1.25;
     margin-top: 0.2rem;
+    max-width: 18rem;
   }
 
   .item-desc--size-l {
@@ -401,7 +564,8 @@ body {
   }
   
   .item-desc.item-extra {
-    width: 90%;
+    width: 100%;
+    max-width: 90%;
   }
 
   .section-footer span {
@@ -426,5 +590,27 @@ body {
 
   .notice-allergies {
     font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 577px) {
+  .fixed-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-wrapper {
+    padding-left: 0;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .section-header {
+    font-size: 2.4rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.4rem;
   }
 }
