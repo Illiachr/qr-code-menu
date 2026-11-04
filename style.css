@@ -286,6 +286,10 @@ body {
   letter-spacing: 2px;
 }
 
+.title-m {
+  font-size: 1.2rem;
+}
+
 .item-header.grid {
   display: grid;
   grid-template-columns: 1fr 60px auto;
